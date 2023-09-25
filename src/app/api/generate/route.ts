@@ -27,7 +27,7 @@ export const POST = async (request: Request) => {
       size: '512x512'
     })
 
-    return NextResponse.json({ url: 'https://freepngimg.com/save/104082-picture-whatsapp-shocked-emoji-download-hd/512x512' }, {
+    return NextResponse.json({ url: (response as any).data.data[0].url }, {
       status: 200
     })
   } catch (error) {
